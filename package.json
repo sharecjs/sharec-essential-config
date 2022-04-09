@@ -1,16 +1,16 @@
 {
   "name": "sharec-essential-config",
-  "version": "3.0.1",
+  "version": "3.1.0",
   "description": "",
   "author": "Konstantin Epishev <lamartire@gmail.com>",
   "keywords": [],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lamartire/sharec"
+    "url": "https://github.com/sharecjs/sharec"
   },
   "homepage": "https://github.com/sharecjs/sharec-essential-config",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lamartire/sharec"
+    "url": "git+https://github.com/sharecjs/sharec"
   }
 }

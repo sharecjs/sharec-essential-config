@@ -5,48 +5,36 @@
     "lint-staged": "lint-staged"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,json}": [
+    "./*.{js,jsx,json}": [
       "eslint --fix",
-      "prettier --write",
       "git add"
     ]
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "config": {
-    "commitizen": {
-      "path": "cz-conventional-changelog"
-    }
-  },
-  "prettier": {
-    "semi": false,
-    "singleQuote": true,
-    "trailingComma": "all"
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
   },
   "eslintConfig": {
-    "parser": "babel-eslint",
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaVersion": 2018
+    },
     "extends": [
-      "standard",
-      "prettier",
-      "prettier/standard"
-    ],
-    "plugins": [
-      "prettier"
+      "standard"
     ],
     "env": {
       "node": true
     },
     "rules": {
-      "prettier/prettier": [
+      "comma-dangle": [
+        "error",
+        "always-multiline"
+      ],
+      "space-before-function-paren": [
         "error",
         {
-          "semi": false,
-          "singleQuote": true,
-          "trailingComma": "all"
+          "asyncArrow": "always",
+          "anonymous": "never",
+          "named": "never"
         }
       ]
     }
@@ -55,22 +43,14 @@
     "/node_modules"
   ],
   "devDependencies": {
-    "@commitlint/cli": "^7.6.1",
-    "@commitlint/config-conventional": "^7.6.0",
-    "babel-eslint": "^10.0.1",
-    "commitizen": "^3.1.1",
-    "cz-conventional-changelog": "^2.1.0",
+    "@typescript-eslint/parser": "^4.7.0",
     "eslint": "^5.16.0",
-    "eslint-config-prettier": "^4.2.0",
-    "eslint-config-prettier-standard": "^2.0.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.17.2",
     "eslint-plugin-node": "^9.0.1",
-    "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-standard": "^4.0.0",
-    "husky": "^2.2.0",
     "lint-staged": "^8.1.6",
-    "prettier": "^1.17.1"
+    "simple-git-hooks": "^2.7.0"
   }
 }
