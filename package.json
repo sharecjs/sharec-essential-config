@@ -1,6 +1,6 @@
 {
   "name": "sharec-essential-config",
-  "version": "2.10.7",
+  "version": "3.0.0",
   "description": "",
   "author": "Konstantin Epishev <lamartire@gmail.com>",
   "keywords": [],
@@ -8,15 +8,9 @@
   "bugs": {
     "url": "https://github.com/lamartire/sharec"
   },
-  "homepage": "https://github.com/lamartire/sharec/tree/master/packages/sharec-essential-config",
+  "homepage": "https://github.com/sharecjs/sharec-essential-config",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lamartire/sharec"
-  },
-  "dependencies": {
-    "sharec": "^2.10.7"
-  },
-  "scripts": {
-    "postinstall": "sharec"
   }
 }
