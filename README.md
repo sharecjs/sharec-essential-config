@@ -26,3 +26,9 @@ Or with `yarn`:
 ```shell
 yarn add -D sharec-essential-config
 ```
+
+And then unwrap configs:
+
+```shell
+npx sharec
+```
